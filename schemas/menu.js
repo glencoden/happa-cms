@@ -1,17 +1,32 @@
 export default {
+    title: 'Tageskarte',
     name: 'menu',
     type: 'document',
-    title: 'Menu',
     fields: [
         {
-            name: 'title',
-            type: 'string',
-            title: 'Title',
-        },
-        {
+            title: 'Beschreibung für Interne',
             name: 'description',
             type: 'string',
-            title: 'Description',
+        },
+        {
+            title: 'Titel',
+            name: 'title',
+            type: 'localizedString',
+        },
+        {
+            title: 'Karte',
+            name: 'detail',
+            type: 'localizedBlock',
         },
     ],
+    preview: {
+        select: {
+            title: 'title',
+            subtitle: 'description',
+        },
+        prepare: selection => ({
+            title: selection.title?.de,
+            subtitle: selection.subtitle,
+        }),
+    },
 }
