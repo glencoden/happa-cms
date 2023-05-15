@@ -1,12 +1,22 @@
 export default {
-    title: 'Dinner Events',
+    title: 'Dinner',
     name: 'dinner',
     type: 'document',
     fields: [
         {
-            title: 'Rsvp Link',
-            name: 'rsvpLink',
-            type: 'string',
+            title: 'Titel',
+            name: 'title',
+            type: 'localizedString',
+        },
+        {
+            title: 'Beschreibung',
+            name: 'description',
+            type: 'localizedBlock',
+        },
+        {
+            title: 'Banner Bild',
+            name: 'banner',
+            type: 'image',
         },
     ],
 }
