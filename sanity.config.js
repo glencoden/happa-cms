@@ -1,14 +1,18 @@
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
-import schemas from './schemas'
+import { schemaTypes } from './schemas'
+import { deskStructure } from './deskStructure'
 
 export default defineConfig({
     title: 'happa-cms',
     projectId: 'hwz0ma01',
     dataset: 'production',
     plugins: [
-        deskTool(),
+        deskTool({
+            structure: deskStructure
+
+        }),
         visionTool(),
     ],
     tools: (prev) => {
@@ -19,6 +23,6 @@ export default defineConfig({
         return prev.filter((tool) => tool.name !== 'vision')
     },
     schema: {
-        types: schemas,
+        types: schemaTypes,
     },
 })

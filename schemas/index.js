@@ -1,11 +1,23 @@
-import localizedString from './localizedString'
-import localizedBlock from './localizedBlock'
-import menu from './menu'
-import dinner from './dinner'
+import localizedString from './objects/localizedString'
+import localizedBlock from './objects/localizedBlock'
+import lunchMenu from './documents/lunchMenu'
+import homeBanner from './documents/homeBanner'
+import homeLunchSection from './documents/homeLunchSection'
+import homeDinnerSection from './documents/homeDinnerSection'
 
-export default [
+const objectTypes = [
     localizedString,
     localizedBlock,
-    menu,
-    dinner
+]
+
+const documentTypes = [
+    homeBanner,
+    homeLunchSection,
+    homeDinnerSection,
+    lunchMenu,
+]
+
+export const schemaTypes = [
+    ...objectTypes,
+    ...documentTypes,
 ]

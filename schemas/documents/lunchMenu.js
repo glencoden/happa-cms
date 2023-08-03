@@ -1,13 +1,8 @@
 export default {
     title: 'Tageskarte',
-    name: 'menu',
+    name: 'lunchMenu',
     type: 'document',
     fields: [
-        {
-            title: 'Beschreibung für Interne',
-            name: 'description',
-            type: 'string',
-        },
         {
             title: 'Titel',
             name: 'title',
@@ -22,11 +17,9 @@ export default {
     preview: {
         select: {
             title: 'title',
-            subtitle: 'description',
         },
         prepare: selection => ({
             title: selection.title?.de,
-            subtitle: selection.subtitle,
         }),
     },
 }
