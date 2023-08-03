@@ -1,6 +1,4 @@
 export default {
-    title: 'Home Mittagstisch Beschreibung',
-    name: 'homeLunchSection',
     type: 'document',
     fields: [
         {

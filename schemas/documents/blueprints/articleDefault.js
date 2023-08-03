@@ -1,6 +1,4 @@
 export default {
-    title: 'Home Banner',
-    name: 'homeBanner',
     type: 'document',
     fields: [
         {
@@ -9,14 +7,14 @@ export default {
             type: 'localizedString',
         },
         {
-            title: 'Untertitel',
-            name: 'subtitle',
-            type: 'localizedString',
-        },
-        {
             title: 'Beschreibung',
             name: 'description',
             type: 'localizedBlock',
+        },
+        {
+            title: 'Button Text',
+            name: 'buttonText',
+            type: 'localizedString',
         },
         {
             title: 'Bild',

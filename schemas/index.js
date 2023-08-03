@@ -1,9 +1,8 @@
 import localizedString from './objects/localizedString'
 import localizedBlock from './objects/localizedBlock'
-import lunchMenu from './documents/lunchMenu'
-import homeBanner from './documents/homeBanner'
-import homeLunchSection from './documents/homeLunchSection'
-import homeDinnerSection from './documents/homeDinnerSection'
+import { homeBanner, homeDinnerSection, homeLunchSection } from './documents/pages/home'
+import { aboutBanner, aboutNina, aboutSophia, aboutCarousel, aboutHappaForHome } from './documents/pages/about'
+import { lunchMenu, lunchDescription } from './documents/pages/lunch'
 
 const objectTypes = [
     localizedString,
@@ -14,7 +13,13 @@ const documentTypes = [
     homeBanner,
     homeLunchSection,
     homeDinnerSection,
+    aboutBanner,
+    aboutNina,
+    aboutSophia,
+    aboutCarousel,
+    aboutHappaForHome,
     lunchMenu,
+    lunchDescription,
 ]
 
 export const schemaTypes = [

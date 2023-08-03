@@ -1,12 +1,12 @@
 export const deskStructure = (S) =>
     S.list()
-        .title('Unterseiten')
+        .title('Unterseite')
         .items([
             S.listItem()
                 .title('Home')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
                                 .title('Banner')
@@ -23,29 +23,44 @@ export const deskStructure = (S) =>
                 .title('Über uns')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
-                                .title('Tageskarte')
-                                .child(S.document().schemaType('lunchMenu').documentId('lunchMenu')),
+                                .title('Banner')
+                                .child(S.document().schemaType('aboutBanner').documentId('aboutBanner')),
+                            S.listItem()
+                                .title('Über Nina')
+                                .child(S.document().schemaType('aboutNina').documentId('aboutNina')),
+                            S.listItem()
+                                .title('Über Sophia')
+                                .child(S.document().schemaType('aboutSophia').documentId('aboutSophia')),
+                            S.listItem()
+                                .title('Über uns Karussell')
+                                .child(S.document().schemaType('aboutCarousel').documentId('aboutCarousel')),
+                            S.listItem()
+                                .title('Happa für Zuhause')
+                                .child(S.document().schemaType('aboutHappaForHome').documentId('aboutHappaForHome')),
                         ]),
                 ),
             S.listItem()
                 .title('Mittag')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
                                 .title('Tageskarte')
                                 .child(S.document().schemaType('lunchMenu').documentId('lunchMenu')),
+                            S.listItem()
+                                .title('Mittagstisch Beschreibung')
+                                .child(S.document().schemaType('lunchDescription').documentId('lunchDescription')),
                         ]),
                 ),
             S.listItem()
                 .title('Dinner')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
                                 .title('Tageskarte')
@@ -56,7 +71,7 @@ export const deskStructure = (S) =>
                 .title('Events')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
                                 .title('Tageskarte')
@@ -67,7 +82,7 @@ export const deskStructure = (S) =>
                 .title('Gutscheine')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
                                 .title('Tageskarte')
@@ -78,7 +93,7 @@ export const deskStructure = (S) =>
                 .title('Partner')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
                                 .title('Tageskarte')
@@ -89,7 +104,7 @@ export const deskStructure = (S) =>
                 .title('Presse')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
                                 .title('Tageskarte')
@@ -100,7 +115,7 @@ export const deskStructure = (S) =>
                 .title('Impressum')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
                                 .title('Tageskarte')
@@ -111,7 +126,7 @@ export const deskStructure = (S) =>
                 .title('Datenschutz')
                 .child(
                     S.list()
-                        .title('Elemente')
+                        .title('Element')
                         .items([
                             S.listItem()
                                 .title('Tageskarte')

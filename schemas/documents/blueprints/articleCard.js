@@ -1,16 +1,9 @@
 export default {
-    title: 'Home Dinnerevents Beschreibung',
-    name: 'homeDinnerSection',
     type: 'document',
     fields: [
         {
             title: 'Titel',
             name: 'title',
-            type: 'localizedString',
-        },
-        {
-            title: 'Untertitel',
-            name: 'subtitle',
             type: 'localizedString',
         },
         {
