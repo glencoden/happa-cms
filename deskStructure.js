@@ -106,35 +106,11 @@ export const deskStructure = (S) =>
                 ),
             S.listItem()
                 .title('Presse')
-                .child(
-                    S.list()
-                        .title('Element')
-                        .items([
-                            S.listItem()
-                                .title('Tageskarte')
-                                .child(S.document().schemaType('lunchMenu').documentId('lunchMenu')),
-                        ]),
-                ),
+                .child(S.document().schemaType('press').documentId('press')),
             S.listItem()
                 .title('Impressum')
-                .child(
-                    S.list()
-                        .title('Element')
-                        .items([
-                            S.listItem()
-                                .title('Tageskarte')
-                                .child(S.document().schemaType('lunchMenu').documentId('lunchMenu')),
-                        ]),
-                ),
+                .child(S.document().schemaType('imprint').documentId('imprint')),
             S.listItem()
                 .title('Datenschutz')
-                .child(
-                    S.list()
-                        .title('Element')
-                        .items([
-                            S.listItem()
-                                .title('Tageskarte')
-                                .child(S.document().schemaType('lunchMenu').documentId('lunchMenu')),
-                        ]),
-                ),
+                .child(S.document().schemaType('dataProtection').documentId('dataProtection')),
         ])

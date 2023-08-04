@@ -7,6 +7,9 @@ import { dinnerBanner, dinnerEvent, dinnerEvents } from './documents/pages/dinne
 import { eventsBanner, eventPublic, eventsPublic, eventsPrivate } from './documents/pages/events'
 import { voucher } from './documents/pages/voucher'
 import { partnerBanner, partnerCarouselItem, partnerCarousel } from './documents/pages/partner'
+import { press } from './documents/pages/press'
+import { imprint } from './documents/pages/imprint'
+import { dataProtection } from './documents/pages/dataProtection'
 
 const objectTypes = [
     localizedString,
@@ -35,6 +38,9 @@ const documentTypes = [
     partnerBanner,
     partnerCarouselItem,
     partnerCarousel,
+    press,
+    imprint,
+    dataProtection,
 ]
 
 export const schemaTypes = [
