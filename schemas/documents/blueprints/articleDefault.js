@@ -17,6 +17,11 @@ export default {
             type: 'localizedString',
         },
         {
+            title: 'Button Link',
+            name: 'buttonLink',
+            type: 'string',
+        },
+        {
             title: 'Bild',
             name: 'image',
             type: 'image',
@@ -25,11 +30,11 @@ export default {
     preview: {
         select: {
             title: 'title',
-            subtitle: 'subtitle',
+            subtitle: 'description',
         },
         prepare: selection => ({
             title: selection.title?.de,
-            subtitle: selection.subtitle?.de
+            subtitle: selection.subtitle?.de,
         }),
     },
 }

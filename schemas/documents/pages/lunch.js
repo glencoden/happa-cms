@@ -12,7 +12,7 @@ export const lunchMenu = {
         },
         {
             title: 'Karte',
-            name: 'detail',
+            name: 'menu',
             type: 'localizedBlock',
         },
     ],

@@ -29,7 +29,7 @@ export default {
         },
         prepare: selection => ({
             title: selection.title?.de,
-            subtitle: selection.subtitle?.de
+            subtitle: selection.subtitle?.de,
         }),
     },
 }

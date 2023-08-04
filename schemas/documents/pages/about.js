@@ -35,10 +35,10 @@ export const aboutCarousel = {
             name: 'images',
             type: 'array',
             of: [
-                { type: 'image' }
-            ]
-        }
-    ]
+                { type: 'image' },
+            ],
+        },
+    ],
 }
 
 export const aboutHappaForHome = {

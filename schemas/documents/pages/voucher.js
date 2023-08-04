@@ -1,4 +1,6 @@
-export default {
+export const voucher = {
+    title: 'Gutscheine',
+    name: 'voucher',
     type: 'document',
     fields: [
         {
@@ -7,9 +9,24 @@ export default {
             type: 'localizedString',
         },
         {
+            title: 'Untertitel',
+            name: 'subtitle',
+            type: 'localizedString',
+        },
+        {
             title: 'Beschreibung',
             name: 'description',
             type: 'localizedBlock',
+        },
+        {
+            title: 'Button Text',
+            name: 'buttonText',
+            type: 'localizedString',
+        },
+        {
+            title: 'Button Link',
+            name: 'buttonLink',
+            type: 'string',
         },
         {
             title: 'Bild',
@@ -20,7 +37,7 @@ export default {
     preview: {
         select: {
             title: 'title',
-            subtitle: 'description',
+            subtitle: 'subtitle',
         },
         prepare: selection => ({
             title: selection.title?.de,

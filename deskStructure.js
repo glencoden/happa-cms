@@ -35,7 +35,7 @@ export const deskStructure = (S) =>
                                 .title('Über Sophia')
                                 .child(S.document().schemaType('aboutSophia').documentId('aboutSophia')),
                             S.listItem()
-                                .title('Über uns Karussell')
+                                .title('Karussell')
                                 .child(S.document().schemaType('aboutCarousel').documentId('aboutCarousel')),
                             S.listItem()
                                 .title('Happa für Zuhause')
@@ -63,8 +63,11 @@ export const deskStructure = (S) =>
                         .title('Element')
                         .items([
                             S.listItem()
-                                .title('Tageskarte')
-                                .child(S.document().schemaType('lunchMenu').documentId('lunchMenu')),
+                                .title('Banner')
+                                .child(S.document().schemaType('dinnerBanner').documentId('dinnerBanner')),
+                            S.listItem()
+                                .title('Events')
+                                .child(S.document().schemaType('dinnerEvents').documentId('dinnerEvents')),
                         ]),
                 ),
             S.listItem()
@@ -74,21 +77,19 @@ export const deskStructure = (S) =>
                         .title('Element')
                         .items([
                             S.listItem()
-                                .title('Tageskarte')
-                                .child(S.document().schemaType('lunchMenu').documentId('lunchMenu')),
+                                .title('Banner')
+                                .child(S.document().schemaType('eventsBanner').documentId('eventsBanner')),
+                            S.listItem()
+                                .title('Events')
+                                .child(S.document().schemaType('eventsPublic').documentId('eventsPublic')),
+                            S.listItem()
+                                .title('Private Booking')
+                                .child(S.document().schemaType('eventsPrivate').documentId('eventsPrivate')),
                         ]),
                 ),
             S.listItem()
                 .title('Gutscheine')
-                .child(
-                    S.list()
-                        .title('Element')
-                        .items([
-                            S.listItem()
-                                .title('Tageskarte')
-                                .child(S.document().schemaType('lunchMenu').documentId('lunchMenu')),
-                        ]),
-                ),
+                .child(S.document().schemaType('voucher').documentId('voucher')),
             S.listItem()
                 .title('Partner')
                 .child(
@@ -96,8 +97,11 @@ export const deskStructure = (S) =>
                         .title('Element')
                         .items([
                             S.listItem()
-                                .title('Tageskarte')
-                                .child(S.document().schemaType('lunchMenu').documentId('lunchMenu')),
+                                .title('Banner')
+                                .child(S.document().schemaType('partnerBanner').documentId('partnerBanner')),
+                            S.listItem()
+                                .title('Karussell')
+                                .child(S.document().schemaType('partnerCarousel').documentId('partnerCarousel')),
                         ]),
                 ),
             S.listItem()
