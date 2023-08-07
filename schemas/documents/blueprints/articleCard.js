@@ -1,6 +1,4 @@
 export default {
-    title: 'Dinner',
-    name: 'dinner',
     type: 'document',
     fields: [
         {
@@ -14,9 +12,19 @@ export default {
             type: 'localizedBlock',
         },
         {
-            title: 'Banner Bild',
-            name: 'banner',
+            title: 'Bild',
+            name: 'image',
             type: 'image',
         },
     ],
+    preview: {
+        select: {
+            title: 'title',
+            subtitle: 'description',
+        },
+        prepare: selection => ({
+            title: selection.title?.de,
+            subtitle: selection.subtitle?.de,
+        }),
+    },
 }

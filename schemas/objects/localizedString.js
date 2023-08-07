@@ -1,4 +1,4 @@
-import supportedLanguages from './locale/supportedLanguages'
+import supportedLanguages from '../enums/supportedLanguages'
 
 export default {
     title: 'Localized String',
