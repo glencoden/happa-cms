@@ -7,28 +7,28 @@ export const partnerBanner = {
     ...articleBanner,
 }
 
-export const partnerCarouselItem = {
-    title: 'Partner Karussell Item',
-    name: 'partnerCarouselItem',
+export const partners = {
+    title: 'Partner',
+    name: 'partners',
     ...articleCard,
 }
 
-export const partnerCarousel = {
-    title: 'Partner Karussell',
-    name: 'partnerCarousel',
-    type: 'document',
-    fields: [
-        {
-            name: 'Partner',
-            type: 'array',
-            of: [
-                { type: 'reference', to: [ { type: 'partnerCarouselItem' } ] },
-            ],
-        },
-    ],
-    preview: {
-        prepare: () => ({
-            title: 'Liste',
-        }),
-    },
-}
+// export const partnerCarousel = {
+//     title: 'Partner Karussell',
+//     name: 'partnerCarousel',
+//     type: 'document',
+//     fields: [
+//         {
+//             name: 'Partner',
+//             type: 'array',
+//             of: [
+//                 { type: 'reference', to: [ { type: 'partnerCarouselItem' } ] },
+//             ],
+//         },
+//     ],
+//     preview: {
+//         prepare: () => ({
+//             title: 'Liste',
+//         }),
+//     },
+// }

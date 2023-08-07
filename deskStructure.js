@@ -65,9 +65,7 @@ export const deskStructure = (S) =>
                             S.listItem()
                                 .title('Banner')
                                 .child(S.document().schemaType('dinnerBanner').documentId('dinnerBanner')),
-                            S.listItem()
-                                .title('Events')
-                                .child(S.document().schemaType('dinnerEvents').documentId('dinnerEvents')),
+                            ...S.documentTypeListItems().filter(listItem => ['dinnerEvents'].includes(listItem.getId()))
                         ]),
                 ),
             S.listItem()
@@ -79,9 +77,7 @@ export const deskStructure = (S) =>
                             S.listItem()
                                 .title('Banner')
                                 .child(S.document().schemaType('eventsBanner').documentId('eventsBanner')),
-                            S.listItem()
-                                .title('Events')
-                                .child(S.document().schemaType('eventsPublic').documentId('eventsPublic')),
+                            ...S.documentTypeListItems().filter(listItem => ['eventsPublic'].includes(listItem.getId())),
                             S.listItem()
                                 .title('Private Booking')
                                 .child(S.document().schemaType('eventsPrivate').documentId('eventsPrivate')),
@@ -99,9 +95,7 @@ export const deskStructure = (S) =>
                             S.listItem()
                                 .title('Banner')
                                 .child(S.document().schemaType('partnerBanner').documentId('partnerBanner')),
-                            S.listItem()
-                                .title('Karussell')
-                                .child(S.document().schemaType('partnerCarousel').documentId('partnerCarousel')),
+                            ...S.documentTypeListItems().filter(listItem => ['partners'].includes(listItem.getId())),
                         ]),
                 ),
             S.listItem()

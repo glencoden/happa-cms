@@ -6,9 +6,9 @@ export const dinnerBanner = {
     ...articleBanner,
 }
 
-export const dinnerEvent = {
-    title: 'Dinnerevent',
-    name: 'dinnerEvent',
+export const dinnerEvents = {
+    title: 'Dinnerevents',
+    name: 'dinnerEvents',
     type: 'document',
     fields: [
         {
@@ -38,26 +38,6 @@ export const dinnerEvent = {
         },
         prepare: selection => ({
             title: selection.title?.de,
-        }),
-    },
-}
-
-export const dinnerEvents = {
-    title: 'Dinnerevents',
-    name: 'dinnerEvents',
-    type: 'document',
-    fields: [
-        {
-            name: 'Dinnerevents',
-            type: 'array',
-            of: [
-                { type: 'reference', to: [ { type: 'dinnerEvent' } ] },
-            ],
-        },
-    ],
-    preview: {
-        prepare: () => ({
-            title: 'Liste',
         }),
     },
 }

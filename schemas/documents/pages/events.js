@@ -6,9 +6,9 @@ export const eventsBanner = {
     ...articleBanner,
 }
 
-export const eventPublic = {
-    title: 'Public Event',
-    name: 'eventPublic',
+export const eventsPublic = {
+    title: 'Public Events',
+    name: 'eventsPublic',
     type: 'document',
     fields: [
         {
@@ -50,26 +50,6 @@ export const eventPublic = {
         prepare: selection => ({
             title: selection.title?.de,
             subtitle: selection.subtitle?.de,
-        }),
-    },
-}
-
-export const eventsPublic = {
-    title: 'Public Events',
-    name: 'eventsPublic',
-    type: 'document',
-    fields: [
-        {
-            name: 'Events',
-            type: 'array',
-            of: [
-                { type: 'reference', to: [ { type: 'eventPublic' } ] },
-            ],
-        },
-    ],
-    preview: {
-        prepare: () => ({
-            title: 'Liste',
         }),
     },
 }
