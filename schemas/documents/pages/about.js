@@ -39,6 +39,11 @@ export const aboutCarousel = {
             ],
         },
     ],
+    preview: {
+        prepare: () => ({
+            title: 'Karussell',
+        }),
+    },
 }
 
 export const aboutHappaForHome = {
