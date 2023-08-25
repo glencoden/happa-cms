@@ -12,23 +12,3 @@ export const partners = {
     name: 'partners',
     ...articleCard,
 }
-
-// export const partnerCarousel = {
-//     title: 'Partner Karussell',
-//     name: 'partnerCarousel',
-//     type: 'document',
-//     fields: [
-//         {
-//             name: 'Partner',
-//             type: 'array',
-//             of: [
-//                 { type: 'reference', to: [ { type: 'partnerCarouselItem' } ] },
-//             ],
-//         },
-//     ],
-//     preview: {
-//         prepare: () => ({
-//             title: 'Liste',
-//         }),
-//     },
-// }

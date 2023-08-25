@@ -20,11 +20,9 @@ export default {
     preview: {
         select: {
             title: 'title',
-            subtitle: 'description',
         },
         prepare: selection => ({
             title: selection.title?.de,
-            subtitle: selection.subtitle?.de,
         }),
     },
 }
