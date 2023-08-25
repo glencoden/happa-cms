@@ -11,4 +11,12 @@ export const partners = {
     title: 'Partner',
     name: 'partners',
     ...articleCard,
+    fields: [
+        ...articleCard.fields,
+        {
+            title: 'Link Url',
+            name: 'linkUrl',
+            type: 'string',
+        },
+    ]
 }
