@@ -15,7 +15,7 @@ export const partners = {
         ...articleCard.fields,
         {
             title: 'Link Url',
-            name: 'linkUrl',
+            name: 'buttonLink',
             type: 'string',
         },
     ]
