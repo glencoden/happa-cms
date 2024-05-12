@@ -6,6 +6,32 @@ export const dinnerBanner = {
     ...articleBanner,
 }
 
+export const dinnerCarousel = {
+    title: 'Dinner Karussell',
+    name: 'dinnerCarousel',
+    type: 'document',
+    fields: [
+        {
+            title: 'Beschreibung',
+            name: 'description',
+            type: 'localizedBlock',
+        },
+        {
+            title: 'Bilder',
+            name: 'images',
+            type: 'array',
+            of: [
+                { type: 'image' },
+            ],
+        },
+    ],
+    preview: {
+        prepare: () => ({
+            title: 'Karussell',
+        }),
+    },
+}
+
 export const dinnerEvents = {
     title: 'Dinnerevents',
     name: 'dinnerEvents',

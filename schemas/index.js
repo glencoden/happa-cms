@@ -1,9 +1,9 @@
 import localizedString from './objects/localizedString'
 import localizedBlock from './objects/localizedBlock'
-import { homeBanner, homeDinnerSection, homeLunchSection } from './documents/pages/home'
+import { homeBanner, homeCarousel, homeDinnerSection, homeLunchSection } from './documents/pages/home'
 import { aboutBanner, aboutNina, aboutSophia, aboutCarousel, aboutHappaForHome } from './documents/pages/about'
 import { lunchMenu, lunchDescription } from './documents/pages/lunch'
-import { dinnerBanner, dinnerEvents } from './documents/pages/dinner'
+import { dinnerBanner, dinnerCarousel, dinnerEvents } from './documents/pages/dinner'
 import { eventsBanner, eventsPublic, eventsPrivate } from './documents/pages/events'
 import { voucher } from './documents/pages/voucher'
 import { partnerBanner, partners } from './documents/pages/partner'
@@ -20,6 +20,7 @@ const documentTypes = [
     homeBanner,
     homeLunchSection,
     homeDinnerSection,
+    homeCarousel,
     aboutBanner,
     aboutNina,
     aboutSophia,
@@ -28,6 +29,7 @@ const documentTypes = [
     lunchMenu,
     lunchDescription,
     dinnerBanner,
+    dinnerCarousel,
     dinnerEvents,
     eventsBanner,
     eventsPublic,

@@ -17,6 +17,9 @@ export const deskStructure = (S) =>
                             S.listItem()
                                 .title('Dinnerevents Beschreibung')
                                 .child(S.document().schemaType('homeDinnerSection').documentId('homeDinnerSection')),
+                            S.listItem()
+                                .title('Karussell')
+                                .child(S.document().schemaType('homeCarousel').documentId('homeCarousel')),
                         ]),
                 ),
             S.listItem()
@@ -65,6 +68,9 @@ export const deskStructure = (S) =>
                             S.listItem()
                                 .title('Banner')
                                 .child(S.document().schemaType('dinnerBanner').documentId('dinnerBanner')),
+                            S.listItem()
+                                .title('Karussell')
+                                .child(S.document().schemaType('dinnerCarousel').documentId('dinnerCarousel')),
                             ...S.documentTypeListItems().filter(listItem => ['dinnerEvents'].includes(listItem.getId()))
                         ]),
                 ),

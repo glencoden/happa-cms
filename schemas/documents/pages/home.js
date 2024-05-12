@@ -18,3 +18,29 @@ export const homeDinnerSection = {
     name: 'homeDinnerSection',
     ...articleDefault,
 }
+
+export const homeCarousel = {
+    title: 'Home Karussell',
+    name: 'homeCarousel',
+    type: 'document',
+    fields: [
+        {
+            title: 'Beschreibung',
+            name: 'description',
+            type: 'localizedBlock',
+        },
+        {
+            title: 'Bilder',
+            name: 'images',
+            type: 'array',
+            of: [
+                { type: 'image' },
+            ],
+        },
+    ],
+    preview: {
+        prepare: () => ({
+            title: 'Karussell',
+        }),
+    },
+}
