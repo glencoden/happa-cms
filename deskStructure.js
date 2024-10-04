@@ -85,8 +85,22 @@ export const deskStructure = (S) =>
                                 .child(S.document().schemaType('eventsBanner').documentId('eventsBanner')),
                             ...S.documentTypeListItems().filter(listItem => ['eventsPublic'].includes(listItem.getId())),
                             S.listItem()
-                                .title('Private Booking')
+                                .title('Private Events')
                                 .child(S.document().schemaType('eventsPrivate').documentId('eventsPrivate')),
+                        ]),
+                ),
+            S.listItem()
+                .title('Private Booking')
+                .child(
+                    S.list()
+                        .title('Element')
+                        .items([
+                            S.listItem()
+                                .title('Banner')
+                                .child(S.document().schemaType('privateBookingBanner').documentId('privateBookingBanner')),
+                            S.listItem()
+                                .title('Karussell')
+                                .child(S.document().schemaType('privateBookingCarousel').documentId('privateBookingCarousel')),
                         ]),
                 ),
             S.listItem()

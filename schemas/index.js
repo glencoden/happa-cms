@@ -10,6 +10,7 @@ import { partnerBanner, partners } from './documents/pages/partner'
 import { press } from './documents/pages/press'
 import { imprint } from './documents/pages/imprint'
 import { dataProtection } from './documents/pages/dataProtection'
+import { privateBookingBanner, privateBookingCarousel } from './documents/pages/privateBooking'
 
 const objectTypes = [
     localizedString,
@@ -34,6 +35,8 @@ const documentTypes = [
     eventsBanner,
     eventsPublic,
     eventsPrivate,
+    privateBookingBanner,
+    privateBookingCarousel,
     voucher,
     partnerBanner,
     partners,
