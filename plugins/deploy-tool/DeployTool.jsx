@@ -1,10 +1,12 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Badge, Button, Card, Flex, Stack, Text } from '@sanity/ui'
 import { RocketIcon } from '@sanity/icons/Rocket'
 
 const WORKFLOW_API = 'https://api.github.com/repos/glencoden/happa-website/actions/workflows/deploy-live.yml'
 
 const POLL_INTERVAL = 5000
+
+const MAX_TRIGGER_POLL_CYCLES = 12
 
 const githubHeaders = {
     Accept: 'application/vnd.github+json',
@@ -29,6 +31,9 @@ export function DeployTool() {
     const [isTriggering, setIsTriggering] = useState(false)
     const [error, setError] = useState(null)
 
+    const preDispatchRunIdRef = useRef(undefined)
+    const triggerPollCountRef = useRef(0)
+
     const fetchLatestRun = useCallback(async () => {
         try {
             const response = await fetch(`${WORKFLOW_API}/runs?per_page=1`, { headers: githubHeaders })
@@ -36,8 +41,19 @@ export function DeployTool() {
                 throw new Error(`GitHub responded with status ${response.status}`)
             }
             const data = await response.json()
-            setLatestRun(data.workflow_runs[0] ?? null)
+            const run = data.workflow_runs[0] ?? null
+            setLatestRun(run)
             setError(null)
+            if (preDispatchRunIdRef.current !== undefined) {
+                triggerPollCountRef.current += 1
+                const runId = run !== null ? run.id : null
+                const hasNewRun = runId !== preDispatchRunIdRef.current
+                const hitPollCap = triggerPollCountRef.current >= MAX_TRIGGER_POLL_CYCLES
+                if (hasNewRun || hitPollCap) {
+                    preDispatchRunIdRef.current = undefined
+                    setIsTriggering(false)
+                }
+            }
         } catch (requestError) {
             setError(requestError.message)
         }
@@ -60,6 +76,8 @@ export function DeployTool() {
     const deploy = useCallback(async () => {
         setIsTriggering(true)
         setError(null)
+        preDispatchRunIdRef.current = latestRun !== null ? latestRun.id : null
+        triggerPollCountRef.current = 0
         try {
             const response = await fetch(`${WORKFLOW_API}/dispatches`, {
                 method: 'POST',
@@ -69,15 +87,12 @@ export function DeployTool() {
             if (response.status !== 204) {
                 throw new Error(`GitHub responded with status ${response.status}`)
             }
-            setTimeout(() => {
-                fetchLatestRun()
-                setIsTriggering(false)
-            }, 3000)
         } catch (requestError) {
             setError(requestError.message)
             setIsTriggering(false)
+            preDispatchRunIdRef.current = undefined
         }
-    }, [fetchLatestRun])
+    }, [latestRun])
 
     const label = getRunLabel(latestRun)
 
