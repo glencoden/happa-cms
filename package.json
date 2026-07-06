@@ -6,6 +6,7 @@
     "main": "package.json",
     "author": "Simon Meyer <info@simonmeyer.de>",
     "license": "UNLICENSED",
+    "packageManager": "pnpm@11.10.0",
     "scripts": {
         "start": "sanity start",
         "build": "sanity build",
@@ -16,14 +17,16 @@
         "sanity"
     ],
     "dependencies": {
-        "@sanity/eslint-config-studio": "^2.0.0",
-        "@sanity/vision": "^3.10.3",
-        "eslint": "^8.6.0",
-        "prop-types": "^15.8.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "sanity": "^3.10.3",
-        "styled-components": "^5.2.0"
+        "@sanity/icons": "^5.0.0",
+        "@sanity/ui": "^3.3.1",
+        "@sanity/vision": "^6.3.0",
+        "react": "^19.2.7",
+        "react-dom": "^19.2.7",
+        "sanity": "^6.3.0",
+        "styled-components": "^6.4.3"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "@sanity/eslint-config-studio": "^6.0.0",
+        "eslint": "^10.6.0"
+    }
 }
