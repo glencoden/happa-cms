@@ -5,4 +5,8 @@ export default defineCliConfig({
         projectId: 'hwz0ma01',
         dataset: 'production',
     },
+    studioHost: 'happa',
+    deployment: {
+        appId: '3cb8a2647a0aa088b051596c',
+    },
 })
