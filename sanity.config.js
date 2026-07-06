@@ -3,6 +3,7 @@ import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemas'
 import { deskStructure } from './deskStructure'
+import { deployTool } from './plugins/deploy-tool'
 
 export default defineConfig({
     title: 'happa-cms',
@@ -15,11 +16,11 @@ export default defineConfig({
         visionTool(),
     ],
     tools: (prev) => {
-        // 👇 Uses environment variables set by Vite in development mode
-        if (import.meta.env.DEV) {
-            return prev
-        }
-        return prev.filter((tool) => tool.name !== 'vision')
+        const tools = import.meta.env.DEV
+            ? prev
+            : prev.filter((tool) => tool.name !== 'vision')
+
+        return [...tools, deployTool()]
     },
     schema: {
         types: schemaTypes,
